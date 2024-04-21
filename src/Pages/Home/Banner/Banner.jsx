@@ -3,7 +3,7 @@ import { AwesomeButton } from 'react-awesome-button';
 import 'react-awesome-button/dist/styles.css';
 import { FaInstagram, FaLocationArrow } from "react-icons/fa";
 import { Typewriter } from 'react-simple-typewriter'
-
+ 
 const Banner = () => {
     return (
         <div className="hero py-10 bg-gradient-to-r hover:from-green-400 hover:to-blue-500 from-pink-500 to-yellow-500">
