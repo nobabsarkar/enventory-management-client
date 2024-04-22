@@ -5,11 +5,13 @@ import 'swiper/css/pagination';
 import { EffectCoverflow, Pagination } from 'swiper/modules';
 import { FaStar } from "react-icons/fa";
 import testimonial1 from '../../../assets/testimonial1.png'
+import testimonial2 from '../../../assets/testimonial2.jpg'
+import testimonial3 from '../../../assets/testimonial3.png'
 
 
 const Testimonial = () => {
     return (
-        <div className='bg-slate-300 mt-10 py-10'>
+        <div className='bg-slate-200 mt-10 py-10'>
             <h1 className='flex justify-center text-3xl mb-10 font-bold bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 text-transparent bg-clip-text'>What People Are Saying About Us</h1>
             <Swiper
                 effect={'coverflow'}
@@ -37,7 +39,7 @@ const Testimonial = () => {
                                 <FaStar size={25}/>
                                 <FaStar size={25}/>
                             </div>
-                            <p className='my-5 text-center'>Lorem ipsum dolor sit amet consectetur. Nunc tristique neque tempor nisl feugiat lectus in. Placerat pharetra eleifend integer integer at. Nunc nunc eu arcu amet faucibus.</p>
+                            <p className='my-5 text-center px-5'>Lorem ipsum dolor sit amet consectetur. Nunc tristique neque tempor nisl feugiat lectus in. Placerat pharetra eleifend integer integer at. Nunc nunc eu arcu amet faucibus.</p>
                             <div className='flex items-center space-x-2 my-5 justify-center'>
                                 <img style={{width:'70px', height:'70px', borderRadius:'100%', border:'3px solid orange'}} src={testimonial1} alt="" />
                                 <h2 className='text-2xl font-bold'>Harris Johnson</h2>
@@ -53,7 +55,39 @@ const Testimonial = () => {
                                 <FaStar size={25}/>
                                 <FaStar size={25}/>
                             </div>
-                            <p className='my-5 text-center'>Lorem ipsum dolor sit amet consectetur. Nunc tristique neque tempor nisl feugiat lectus in. Placerat pharetra eleifend integer integer at. Nunc nunc eu arcu amet faucibus.</p>
+                            <p className='my-5 text-center px-5'>Lorem ipsum dolor sit amet consectetur. Nunc tristique neque tempor nisl feugiat lectus in. Placerat pharetra eleifend integer integer at. Nunc nunc eu arcu amet faucibus.</p>
+                            <div className='flex items-center space-x-2 my-5 justify-center'>
+                                <img style={{width:'70px', height:'70px', borderRadius:'100%', border:'3px solid orange'}} src={testimonial3} alt="" />
+                                <h2 className='text-2xl font-bold'>James Rabbin</h2>
+                            </div>
+                        </div>
+                    </SwiperSlide>
+                    <SwiperSlide className='' style={{ width: '400px' }}>
+                        <div className='bg-white py-10 space-x-3 rounded-lg'>
+                            <div className='flex my-5 justify-center space-x-2 text-yellow-400'>
+                                <FaStar size={25}/>
+                                <FaStar size={25}/>
+                                <FaStar size={25}/>
+                                <FaStar size={25}/>
+                                <FaStar size={25}/>
+                            </div>
+                            <p className='my-5 text-center px-5'>Lorem ipsum dolor sit amet consectetur. Nunc tristique neque tempor nisl feugiat lectus in. Placerat pharetra eleifend integer integer at. Nunc nunc eu arcu amet faucibus.</p>
+                            <div className='flex items-center space-x-2 my-5 justify-center'>
+                                <img style={{width:'70px', height:'70px', borderRadius:'100%', border:'3px solid orange'}} src={testimonial2} alt="" />
+                                <h2 className='text-2xl font-bold'>Durso Raeen</h2>
+                            </div>
+                        </div>
+                    </SwiperSlide>
+                    <SwiperSlide className='' style={{ width: '400px' }}>
+                        <div className='bg-white py-10 space-x-3 rounded-lg'>
+                            <div className='flex my-5 justify-center space-x-2 text-yellow-400'>
+                                <FaStar size={25}/>
+                                <FaStar size={25}/>
+                                <FaStar size={25}/>
+                                <FaStar size={25}/>
+                                <FaStar size={25}/>
+                            </div>
+                            <p className='my-5 text-center px-5'>Lorem ipsum dolor sit amet consectetur. Nunc tristique neque tempor nisl feugiat lectus in. Placerat pharetra eleifend integer integer at. Nunc nunc eu arcu amet faucibus.</p>
                             <div className='flex items-center space-x-2 my-5 justify-center'>
                                 <img style={{width:'70px', height:'70px', borderRadius:'100%', border:'3px solid orange'}} src={testimonial1} alt="" />
                                 <h2 className='text-2xl font-bold'>Harris Johnson</h2>
@@ -69,39 +103,7 @@ const Testimonial = () => {
                                 <FaStar size={25}/>
                                 <FaStar size={25}/>
                             </div>
-                            <p className='my-5 text-center'>Lorem ipsum dolor sit amet consectetur. Nunc tristique neque tempor nisl feugiat lectus in. Placerat pharetra eleifend integer integer at. Nunc nunc eu arcu amet faucibus.</p>
-                            <div className='flex items-center space-x-2 my-5 justify-center'>
-                                <img style={{width:'70px', height:'70px', borderRadius:'100%', border:'3px solid orange'}} src={testimonial1} alt="" />
-                                <h2 className='text-2xl font-bold'>Harris Johnson</h2>
-                            </div>
-                        </div>
-                    </SwiperSlide>
-                    <SwiperSlide className='' style={{ width: '400px' }}>
-                        <div className='bg-white py-10 space-x-3 rounded-lg'>
-                            <div className='flex my-5 justify-center space-x-2 text-yellow-400'>
-                                <FaStar size={25}/>
-                                <FaStar size={25}/>
-                                <FaStar size={25}/>
-                                <FaStar size={25}/>
-                                <FaStar size={25}/>
-                            </div>
-                            <p className='my-5 text-center'>Lorem ipsum dolor sit amet consectetur. Nunc tristique neque tempor nisl feugiat lectus in. Placerat pharetra eleifend integer integer at. Nunc nunc eu arcu amet faucibus.</p>
-                            <div className='flex items-center space-x-2 my-5 justify-center'>
-                                <img style={{width:'70px', height:'70px', borderRadius:'100%', border:'3px solid orange'}} src={testimonial1} alt="" />
-                                <h2 className='text-2xl font-bold'>Harris Johnson</h2>
-                            </div>
-                        </div>
-                    </SwiperSlide>
-                    <SwiperSlide className='' style={{ width: '400px' }}>
-                        <div className='bg-white py-10 space-x-3 rounded-lg'>
-                            <div className='flex my-5 justify-center space-x-2 text-yellow-400'>
-                                <FaStar size={25}/>
-                                <FaStar size={25}/>
-                                <FaStar size={25}/>
-                                <FaStar size={25}/>
-                                <FaStar size={25}/>
-                            </div>
-                            <p className='my-5 text-center'>Lorem ipsum dolor sit amet consectetur. Nunc tristique neque tempor nisl feugiat lectus in. Placerat pharetra eleifend integer integer at. Nunc nunc eu arcu amet faucibus.</p>
+                            <p className='my-5 text-center px-5'>Lorem ipsum dolor sit amet consectetur. Nunc tristique neque tempor nisl feugiat lectus in. Placerat pharetra eleifend integer integer at. Nunc nunc eu arcu amet faucibus.</p>
                             <div className='flex items-center space-x-2 my-5 justify-center'>
                                 <img style={{width:'70px', height:'70px', borderRadius:'100%', border:'3px solid orange'}} src={testimonial1} alt="" />
                                 <h2 className='text-2xl font-bold'>Harris Johnson</h2>
