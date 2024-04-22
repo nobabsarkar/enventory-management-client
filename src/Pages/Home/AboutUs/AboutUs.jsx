@@ -1,16 +1,26 @@
 import heloCenter from '../../../assets/heloCenter.jpg'
 import { FaCheck } from "react-icons/fa";
+import { FaEarthAmericas } from "react-icons/fa6";
 
 const AboutUs = () => {
     return (
-        <div className="hero shadow-md mt-10 bg-base-300">
+        <div className="hero shadow-md mt-10 bg-base-100">
             <div className="hero-content flex-col lg:flex-row">
-                <img src={heloCenter} className="rounded-lg shadow-2xl w-[600px]" />
+                <div className='w-5/6 relative'>
+                    <div className='flex items-center bg-gradient-to-r from-indigo-400  text-white w-[200px] absolute right-10 bottom-10'>
+                        <FaEarthAmericas className='mr-3 text-white ml-5 ' size={35} />
+                        <div className='py-7'>
+                            <h1 className='text-2xl text-white font-bold'>1,485 +</h1>
+                            <p className='text-white font-bold'>Trusted Clients</p>
+                        </div>
+                    </div>
+                    <img src={heloCenter} className="rounded-lg shadow-2xl " />
+                </div>
                 <div>
                     <div className='w-[120px]'>
-                        <h2 className='text-2xl text-red-500 font-extrabold mb-5 border-b-3 border-red-500  border-b-4'>About Us</h2>
+                        <h2 className='text-2xl text-red-500 font-bold mb-5 border-b-2 border-red-500  border-b-4'>About Us</h2>
                     </div>
-                    <h1 className="text-2xl lg:text-5xl font-bold">We Are The Best Call Center Service For Your Customer.</h1>
+                    <h1 className="text-2xl lg:text-4xl font-bold">We Are The Best Call Center Service For Your Customer.</h1>
                     <p className="py-6 my-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris</p>
                     <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-5'>
                         <div>
