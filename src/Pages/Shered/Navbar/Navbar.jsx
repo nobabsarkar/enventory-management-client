@@ -12,7 +12,8 @@ const Navbar = () => {
         <li><Link>Create-Store</Link></li>
         <li><Link>Dashboard</Link></li>
         <li><Link>Watch Demo</Link></li>
-        <li><Link>Log Out</Link></li>
+        <li><Link to='/login'>Login</Link></li>
+        <li><Link to='/register'>Register</Link></li>
       </>
         :
         <>
