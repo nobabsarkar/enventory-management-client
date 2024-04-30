@@ -6,7 +6,7 @@ import { Typewriter } from 'react-simple-typewriter'
   
 const Banner = () => {
     return (
-        <div className="hero py-10 bg-gradient-to-r hover:from-green-400 hover:to-blue-500 from-pink-500 to-yellow-500">
+        <div className="hero py-10 bg-gradient-to-r from-pink-500 to-yellow-500">
             <div className="hero-content flex-col lg:flex-row-reverse ">
                 <div className='w-full m:w-0'>
                     <img src={img1} className="rounded-lg shadow-2xl animate-pulse" />

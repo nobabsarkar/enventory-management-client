@@ -1,11 +1,16 @@
 import { useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../../providers/AuthProvider";
 import { FaGoogle } from "react-icons/fa";
+import Swal from 'sweetalert2';
 
 
 const Login = () => {
     const { signIn, googleSignIn } = useContext(AuthContext)
+    const location = useLocation()
+    const navigate = useNavigate()
+
+    const from = location.state?.from?.pathname || '/'
 
     const handleLogin = (e) => {
         e.preventDefault()
@@ -16,20 +21,29 @@ const Login = () => {
             .then(result => {
                 const user = result.user;
                 console.log(user)
+                Swal.fire({
+                    position: "top-end",
+                    icon: "success",
+                    title: "User Login Successfull",
+                    showConfirmButton: false,
+                    timer: 1500
+                });
+                navigate(from, { replace: true })
+                form.reset()
             })
             .catch(error => {
                 console.log(error);
             })
     }
 
-    const handleGoogleLogin = ()=>{
+    const handleGoogleLogin = () => {
         googleSignIn()
-        .then(result => {
-            console.log(result.user)
-        })
-        .catch(error => {
-            console.log(error);
-        })
+            .then(result => {
+                console.log(result.user)
+            })
+            .catch(error => {
+                console.log(error);
+            })
     }
 
 
@@ -57,7 +71,7 @@ const Login = () => {
                         <div className="form-control mt-6">
                             <input type="submit" value="Login" className=' bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 btn text-white w-full' />
                         </div>
-                            <button onClick={handleGoogleLogin} className="btn btn-outline btn-secondary"><FaGoogle size={20}></FaGoogle> Login With Google</button>
+                        <button onClick={handleGoogleLogin} className="btn btn-outline btn-secondary"><FaGoogle size={20}></FaGoogle> Login With Google</button>
                     </form>
                     <p className="text-center mb-3"><small>New Here Please? <Link to='/register' className="text-green-500">Create an Account</Link></small></p>
                 </div>

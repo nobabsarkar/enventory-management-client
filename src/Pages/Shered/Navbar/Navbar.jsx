@@ -1,16 +1,16 @@
 import { FaBars } from "react-icons/fa6";
 import logo from '../../../assets/logo.jpeg'
 import { Link } from "react-router-dom";
+import useAuth from "../../../hooks/useAuth";
 
 const Navbar = () => {
-  const user = true;
+  const { user } = useAuth();
 
   const navOptions = <>
     {
-      user ? <>
+      !user ? <>
         <li><Link>Home</Link></li>
-        <li><Link>Create-Store</Link></li>
-        <li><Link>Dashboard</Link></li>
+        <li><Link>Create-Shop</Link></li>
         <li><Link>Watch Demo</Link></li>
         <li><Link to='/login'>Login</Link></li>
         <li><Link to='/register'>Register</Link></li>
@@ -18,10 +18,10 @@ const Navbar = () => {
         :
         <>
           <li><Link>Home</Link></li>
-          <li><Link>Create-Store</Link></li>
+          <li><Link to='/createShop'>Create-Shop</Link></li>
+          <li><Link>Dashboard</Link></li>
           <li><Link>Watch Demo</Link></li>
-          <li><Link>Login</Link></li>
-          <li><Link>Register</Link></li>
+          <li><Link className="btn">LogOut</Link></li>
         </>
     }
 
@@ -47,9 +47,9 @@ const Navbar = () => {
             <FaBars size={35} className="cursor-pointer"></FaBars>
           </label>
         </div>
-        <div className="drawer-side">
+        <div className="drawer-side ">
           <label htmlFor="my-drawer-4" aria-label="close sidebar" className="drawer-overlay"></label>
-          <ul className="menu p-4 w-80 min-h-full bg-base-200 text-base-content">
+          <ul className="menu text-white p-4 w-80 min-h-full bg-base-200 text-base-content bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">
             {navOptions}
           </ul>
         </div>

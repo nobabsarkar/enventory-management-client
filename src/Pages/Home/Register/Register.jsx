@@ -3,38 +3,51 @@ import { useForm } from "react-hook-form";
 import { AuthContext } from '../../../providers/AuthProvider'
 import { Link, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
+import useAxiosPublic from "../../../hooks/useAxiosPublic";
 
 
 
-const image_hosting_key = import.meta.env.VITE_IMAGE_HOSTING_KEY;
-const image_hosting_api = `https://api.imgbb.com/1/upload?key=${image_hosting_key}`
+// const image_hosting_key = import.meta.env.VITE_IMAGE_HOSTING_KEY
+// const image_hosting_api = `https://api.imgbb.com/1/upload?key=${image_hosting_key}`
+
 const Register = () => {
     const { register, handleSubmit, reset, formState: { errors } } = useForm()
     const { createUser, updateUserProfile } = useContext(AuthContext)
     const navigate = useNavigate()
+    const axiosPublic = useAxiosPublic()
 
-    const onSubmit = handleSubmit( async (data) => {
+
+    const onSubmit = (async (data) => {
         console.log(data)
+
+        // const imageFile = data?.image[0]
+        // const res = await axiosPublic.post(image_hosting_api, imageFile, {
+        //     headers: {
+        //         'content-type': 'multipart/form-data'
+        //     }
+        // })
+        // console.log(res)
+
         createUser(data.email, data.password)
             .then(result => {
                 const user = result.user;
                 console.log(user)
-
-                updateUserProfile(data.name, data.photoURL)
-                    .then(() => {
-                        reset()
-                        Swal.fire({
-                            position: "top-end",
-                            icon: "success",
-                            title: "Your work has been saved",
-                            showConfirmButton: false,
-                            timer: 1500
-                        });
-                        navigate('/')
-                    })
-                    .catch(error => {
-                        console.log(error);
-                    })
+                reset()
+                //  updateUserProfile(data.name, data.photoURL[0])
+                //     .then(() => {
+                //         reset()
+                //         Swal.fire({
+                //             position: "top-end",
+                //             icon: "success",
+                //             title: "User Createted Successfully",
+                //             showConfirmButton: false,
+                //             timer: 1500
+                //         });
+                //         navigate('/')
+                //     })
+                //     .catch(error => {
+                //         console.log(error);
+                //     })
             })
             .catch(error => {
                 console.log(error)
@@ -61,7 +74,7 @@ const Register = () => {
                             <label className="label">
                                 <span className="label-text">Upload Photo</span>
                             </label>
-                            <input type="file" {...register("photoURL", { required: true })} className="file-input file-input-bordered file-input-secondary w-full max-w-xs" />
+                            <input type="file" {...register("image", { required: true })} className="file-input file-input-bordered file-input-secondary w-full max-w-xs" />
                             {errors.photoURL && <p className="text-red-500">PhotoRUL is Required</p>}
                         </div>
                         <div className="form-control">
