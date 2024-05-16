@@ -4,9 +4,9 @@ import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
 import { EffectCoverflow, Pagination } from 'swiper/modules';
 import { FaStar } from "react-icons/fa";
-import testimonial1 from '../../../assets/testimonial1.png'
-import testimonial2 from '../../../assets/testimonial2.jpg'
-import testimonial3 from '../../../assets/testimonial3.png'
+import testimonial1 from '../../../assets/image1/testimonial1.png'
+import testimonial2 from '../../../assets/image1/testimonial2.jpg'
+import testimonial3 from '../../../assets/image1/testimonial3.png'
 
 
 const Testimonial = () => {

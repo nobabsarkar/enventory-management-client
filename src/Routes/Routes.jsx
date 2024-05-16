@@ -5,6 +5,7 @@ import ErrorPage from "../Pages/ErrorPage/ErrorPage";
 import Login from "../Pages/Home/Login/Login";
 import Register from "../Pages/Home/Register/Register";
 import CreateShop from "../Pages/CreateShop/CreateShop";
+import PrivateRoute from "./PrivateRoute";
 
 
 export const router = createBrowserRouter([
@@ -19,7 +20,9 @@ export const router = createBrowserRouter([
             },
             {
                 path:'/createShop',
-                element:<CreateShop></CreateShop>
+                element:<PrivateRoute>
+                    <CreateShop></CreateShop>
+                </PrivateRoute>
             },
             {
                 path:'/login',

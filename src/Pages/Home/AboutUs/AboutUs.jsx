@@ -1,4 +1,4 @@
-import heloCenter from '../../../assets/heloCenter.jpg'
+import heloCenter from '../../../assets/image1/heloCenter.jpg'
 import { FaCheck } from "react-icons/fa";
 import { FaEarthAmericas } from "react-icons/fa6";
 

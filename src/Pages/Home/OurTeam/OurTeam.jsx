@@ -1,7 +1,7 @@
 import { FaFacebook, FaLinkedin, FaTwitter, FaWhatsapp } from 'react-icons/fa';
-import OurTeam1 from '../../../assets/ourTeam1.avif'
-import OurTeam2 from '../../../assets/ourTeam2.jpg'
-import OurTeam3 from '../../../assets/ourTeam3.avif'
+import OurTeam1 from '../../../assets/image1/ourTeam1.avif'
+import OurTeam2 from '../../../assets/image1/ourTeam2.jpg'
+import OurTeam3 from '../../../assets/image1/ourTeam3.avif'
 
 const OurTeam = () => {
     return (

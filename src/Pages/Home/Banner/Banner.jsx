@@ -1,4 +1,4 @@
-import img1 from '../../../assets/banner2.webp';
+import img1 from '../../../assets/image1/banner.webp';
 import { AwesomeButton } from 'react-awesome-button';
 import 'react-awesome-button/dist/styles.css';
 import { FaInstagram, FaLocationArrow } from "react-icons/fa";
@@ -6,10 +6,10 @@ import { Typewriter } from 'react-simple-typewriter'
   
 const Banner = () => {
     return (
-        <div className="hero py-10 bg-gradient-to-r from-pink-500 to-yellow-500">
+        <div className="hero py-20 bg-gradient-to-r from-pink-500 to-yellow-500">
             <div className="hero-content flex-col lg:flex-row-reverse ">
                 <div className='w-full m:w-0'>
-                    <img src={img1} className="rounded-lg shadow-2xl animate-pulse" />
+                    <img style={{height:'350px'}} src={img1} className="rounded-lg shadow-2xl animate-pulse" />
                 </div>
                 <div className='w-full m:w-0'>
                     <h1 className="text-5xl font-bold text-white">POS & Inventory Management Admin Dashboard <Typewriter
